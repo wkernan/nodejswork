@@ -166,6 +166,29 @@ function editUser(event) {
 
 				// Update the table
 				populateTable();
+				var fullName = $('#editUser fieldset input#editUserFullName').val();
+				var age = $('#editUser fieldset input#editUserAge').val();
+				var gender = $('#editUser fieldset input#editUserGender').val();
+				var location = $('#editUser fieldset input#editUserLocation').val();
+
+				$('#userInfoAge').text(age);
+				$('#userInfoName').text(fullName);
+				$('#userInfoGender').text(gender);
+				$('#userInfoLocation').text(location);
+
+				/*var thisUserName = $('#editUser fieldset input#editUserName').val();
+
+				// Get Index of object based on id value
+				var arrayPosition = userListData.map(function(arrayItem) { return arrayItem.username; }).indexOf(thisUserName);
+
+				// Get our User Object
+				var thisUserObject = userListData[arrayPosition];
+
+				// Populate Info Box
+				$('#userInfoName').text(thisUserObject.fullname);
+				$('#userInfoAge').text(thisUserObject.age);
+				$('#userInfoGender').text(thisUserObject.gender);
+				$('#userInfoLocation').text(thisUserObject.location);*/
 
 			} else {
 
